@@ -25,7 +25,7 @@ body{
 }
 .bg-overlay{
   position:absolute; inset:0;
-  background:linear-gradient(180deg,rgba(255,247,250,.72),rgba(255,241,246,.76),rgba(250,232,241,.84));
+  background:linear-gradient(180deg,rgba(255,247,250,.30),rgba(255,241,246,.34),rgba(250,232,241,.42));
 }
 .blob{
   position:absolute;
