@@ -79,7 +79,13 @@ body{
   backdrop-filter:blur(18px);
   box-shadow:0 20px 55px rgba(174,77,117,.12);
 }
-.main-sheet{padding:34px 34px 38px}
+.main-sheet{
+  padding:34px 34px 38px;
+  background:linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.22)), url('./background.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
 .message-sheet{padding:28px}
 .shine{
   position:absolute;
