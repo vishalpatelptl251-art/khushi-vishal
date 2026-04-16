@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khushi & Vishal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <audio id="bg-audio" loop preload="auto"></audio>
+
+    <div id="bg-layer" class="bg-layer"></div>
+    <div class="bg-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="floating-hearts" aria-hidden="true">
+      <span class="heart h1">❤</span>
+      <span class="heart h2">❤</span>
+      <span class="heart h3">❤</span>
+      <span class="heart h4">❤</span>
+      <span class="heart h5">❤</span>
+      <span class="heart h6">❤</span>
+    </div>
+
+    <main class="container">
+      <section class="sheet main-sheet">
+        <div class="shine"></div>
+
+        <div class="top-actions">
+          <button id="music-btn" class="pill-btn secondary-btn" type="button">Music Off</button>
+        </div>
+
+        <div class="hero">
+          <div class="eyebrow">Together with our loved ones</div>
+          <div class="subhead">We are Getting Engaged !!!</div>
+          <h1 class="names">KHUSHI <span>&amp;</span> VISHAL</h1>
+          <div class="hero-line"></div>
+          <p class="hero-copy">Join and Bless us as we mark the Beginning of our New Journey</p>
+        </div>
+
+        <div class="details-grid">
+          <article class="info-card">
+            <div class="icon-wrap heartbeat"><span class="icon">📅</span></div>
+            <div class="label">Date</div>
+            <div class="value">1 May 2026</div>
+          </article>
+
+          <article class="info-card">
+            <div class="icon-wrap clock-tick"><span class="icon">⏰</span></div>
+            <div class="label">Time</div>
+            <div class="value">9:00 AM</div>
+          </article>
+
+          <article class="info-card">
+            <div class="icon-wrap pin-drop"><span class="icon">📍</span></div>
+            <div class="label">Venue</div>
+            <div class="value">Sri Laxminarayan Bhavan, Lalbagh</div>
+          </article>
+        </div>
+
+        <section class="sheet countdown-sheet">
+          <div class="countdown-title">Countdown to Our Day !</div>
+          <div class="countdown-grid">
+            <div class="count-box"><div id="days" class="count-value">00</div><div class="count-label">Days</div></div>
+            <div class="count-box"><div id="hours" class="count-value">00</div><div class="count-label">Hours</div></div>
+            <div class="count-box"><div id="minutes" class="count-value">00</div><div class="count-label">Minutes</div></div>
+            <div class="count-box"><div id="seconds" class="count-value">00</div><div class="count-label">Seconds</div></div>
+          </div>
+        </section>
+
+        <div class="cta-row">
+          <a href="#message" class="pill-btn primary-btn">Drop a Message for the Couple</a>
+          <a href="https://maps.google.com/?q=WJ33%2BQP9%20Lalbagh%20Patidar%20Samaj%2C%20Off%20Bannerghatta%20Main%20Road%2C%204th%20Main%20Rd%2C%20near%20Sakhii%20Hospital%2C%20Dollar%20Layout%2C%20Munivenkatppa%20Layout%2C%20Bilekahalli%2C%20Bengaluru%2C%20Karnataka%20560076" class="pill-btn secondary-btn">Click here for the Location</a>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Engagement%20Ceremony%20of%20Khushi%20%26%20Vishal&dates=20260501T033000Z/20260501T053000Z&location=Sri%20Laxminarayan%20Bhavan%2C%20Lalbagh%2C%20WJ33%2BQP9%20Lalbagh%20Patidar%20Samaj%2C%20Off%20Bannerghatta%20Main%20Road%2C%204th%20Main%20Rd%2C%20near%20Sakhii%20Hospital%2C%20Dollar%20Layout%2C%20Munivenkatppa%20Layout%2C%20Bilekahalli%2C%20Bengaluru%2C%20Karnataka%20560076" class="pill-btn secondary-btn">Block Your Calendar</a>
+        </div>
+      </section>
+
+      <section class="sheet message-sheet" id="message">
+        <div class="message-title">Drop your Message for the Couple</div>
+        <form id="message-form">
+          <textarea id="message-input" placeholder="Write your message here..."></textarea>
+          <button type="submit" class="pill-btn primary-btn send-btn">Send Message</button>
+          <div id="message-status" class="message-status" hidden>Message sent.</div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    window.INVITE_CONFIG = {
+      fallbackBackground: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCASoBkADASIAAhEBAxEB/8QAHQABAQEBAQEBAQEAAAAAAAAAAAECAwQFBgcICf/EAE8QAAEDAgMEBQYDBgQEBwAAAAEAAhEDIQQSMQVBUQYiYXETMoGRB0JSscHR8BRSYpLhM2KCkqKywdIkQ1Nz8RY0orPC/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECBAMF/8QAKhEBAQEAAgIBAwQDAQAAAAAAAAECEQMhEjFBBBMUYXEiMoGRocHR8P/aAAwDAQACEQMRAD8A+4REQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQE5+KniDxV8T+L/FHijxR4q8UeKvFHirxR4o8UeKPFHinxR4o8UeKPFHinxR4o8UeKPFHinxR4o8UeKPEHifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+KAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHjP4q+J/Ffxh4o8UeKPFHirxR4q8UeKPFXijxR4p8UeKPFHirxR4q8UeKPFHirxR4q8UeKPFHifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/igAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4z+KviHxX8YeKPFHirxR4q8UeKvFHijxV4o8UeKvFHijxT4o8UeKPFHirxR4q8UeKvFHijxR4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4n8T+J/E/ifxP4oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q==',
+      customBackground: "",
+      customMusic: "./music.mp3",
+      eventTime: "2026-05-01T09:00:00+05:30",
+      mailRecipients: ["vishalpatel.ptl251@gmail.com", "khushipatel070903@gmail.com"],
+      mailSubject: "Message for Khushi & Vishal"
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
