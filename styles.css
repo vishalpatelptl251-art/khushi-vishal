@@ -114,12 +114,13 @@ body{
   justify-content:center;
   align-items:center;
   gap:.18em;
-  flex-wrap:nowrap;
-  font-size:clamp(30px,4.6vw,64px);
-  line-height:1.02;
+  flex-wrap:wrap;
+  font-size:clamp(28px,8vw,74px);
+  line-height:1.05;
   text-transform:uppercase;
   font-weight:800;
   letter-spacing:.01em;
+  text-align:center;
   background:linear-gradient(90deg,#a93f6f 0%, #d55b8f 48%, #a93f6f 100%);
   -webkit-background-clip:text;
   background-clip:text;
