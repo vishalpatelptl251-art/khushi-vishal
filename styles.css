@@ -344,7 +344,7 @@ body{
 @media (max-width: 640px){
   .container{padding:24px 16px 30px}
   .main-sheet,.message-sheet{padding:20px}
-  .names{font-size:clamp(28px,12vw,46px)}
+  .names{font-size:clamp(24px,10vw,40px); gap:.14em}
   .details-grid{grid-template-columns:1fr}
   .countdown-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cta-row{flex-direction:column}
