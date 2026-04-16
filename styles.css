@@ -75,8 +75,8 @@ body{
   overflow:hidden;
   border:1px solid rgba(239,159,188,.45);
   border-radius:34px;
-  background:var(--sheet);
-  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.22);
+  backdrop-filter:blur(12px);
   box-shadow:0 20px 55px rgba(174,77,117,.12);
 }
 .main-sheet{
