@@ -151,7 +151,8 @@ background-clip:initial;
   text-align:center;
   font-size:18px;
   line-height:1.8;
-  color:rgba(94,39,64,.92);
+  color:color:#682340;
+text-shadow:0 2px 10px rgba(255,255,255,.5);
   animation:fadeUp .75s ease .12s both;
 }
 
