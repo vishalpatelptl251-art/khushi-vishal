@@ -12,26 +12,19 @@ bgLayer.style.backgroundImage = `url(${cfg.customBackground || cfg.fallbackBackg
 if (cfg.customMusic) audio.src = cfg.customMusic;
 
 let musicOn = false;
-musicBtn.addEventListener('click', async () => {
-  if (!cfg.customMusic) {
-    alert('Add your music file in script.js first, then this button will work.');
-    return;
-  }
-  musicOn = !musicOn;
-  if (musicOn) {
+
+if (cfg.customMusic) {
+  window.addEventListener("load", async () => {
     try {
       await audio.play();
-      musicBtn.textContent = 'Music On';
+      musicOn = true;
+      musicBtn.textContent = "Music On";
     } catch {
       musicOn = false;
-      musicBtn.textContent = 'Music Off';
+      musicBtn.textContent = "Music Off";
     }
-  } else {
-    audio.pause();
-    audio.currentTime = 0;
-    musicBtn.textContent = 'Music Off';
-  }
-});
+  });
+}
 
 function updateCountdown() {
   const target = new Date(cfg.eventTime);
