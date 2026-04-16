@@ -117,25 +117,18 @@ text-shadow:0 2px 10px rgba(255,255,255,.45);
 }
 .names{
   margin:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:.18em;
-  flex-wrap:wrap;
-  font-size:clamp(28px,8vw,74px);
+  display:block;
+  text-align:center;
+  font-size:clamp(28px,4.2vw,58px);
   line-height:1.05;
   text-transform:uppercase;
   font-weight:800;
   letter-spacing:.01em;
-  text-align:center;
   color:#a01f5f;
   text-shadow:0 3px 14px rgba(255,255,255,.55);
-background:none;
--webkit-background-clip:initial;
-background-clip:initial;
+  white-space:nowrap;
   animation:namePulse 2.8s ease-in-out infinite;
 }
-.names span{color:transparent}
 @keyframes namePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
 .hero-line{
   width:170px;
